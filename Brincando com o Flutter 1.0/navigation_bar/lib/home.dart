@@ -5,6 +5,16 @@ class P_Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(child: Text('Página incial'),);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Nome da loja'),
+        ),
+        body: SearchBar(
+          leading: const Icon(Icons.search),
+          hintText: 'Pesquisar',
+        ),
+      ),
+    );
   }
 }
